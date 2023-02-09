@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "temporalio"
+name = "temporalio-arta"
 version = "1.0.0"
 description = "Temporal.io Python SDK"
 license = "MIT"
@@ -9,6 +9,9 @@ homepage = "https://github.com/temporalio/sdk-python"
 repository = "https://github.com/temporalio/sdk-python"
 documentation = "https://docs.temporal.io/docs/python"
 keywords = ["temporal", "workflow"]
+packages= [
+{include="temporalio"}
+]
 # We need to include proto source that is otherwise excluded via .gitignore.
 # We have chosen to keep all source including Rust source in precompiled wheels
 # for easy viewing. It is also complicated to exclude certain pieces for wheels
